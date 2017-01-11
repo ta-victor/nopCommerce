@@ -1261,8 +1261,9 @@ namespace Nop.Services.ExportImport
                         manufacturer.CreatedOnUtc = DateTime.UtcNow;
 
                         //default values
+                        manufacturer.PageSize = _catalogSettings.DefaultManufacturerPageSize;
+                        manufacturer.PageSizeOptions = _catalogSettings.DefaultManufacturerPageSizeOptions;
                         manufacturer.Published = true;
-                        manufacturer.ManufacturerTemplateId = 1;
                         manufacturer.AllowCustomersToSelectPageSize = true;
                     }
 
@@ -1376,8 +1377,12 @@ namespace Nop.Services.ExportImport
                     if (isNew)
                     {
                         category.CreatedOnUtc = DateTime.UtcNow;
-                        //default value
+                        //default values
+                        category.PageSize = _catalogSettings.DefaultCategoryPageSize;
+                        category.PageSizeOptions = _catalogSettings.DefaultCategoryPageSizeOptions;
                         category.Published = true;
+                        category.IncludeInTopMenu = true;
+                        category.AllowCustomersToSelectPageSize = true;
                     }
 
                     var seName = string.Empty;
