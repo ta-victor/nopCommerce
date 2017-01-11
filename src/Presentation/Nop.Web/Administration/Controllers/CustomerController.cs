@@ -909,7 +909,7 @@ namespace Nop.Admin.Controllers
                     Active = model.Active,
                     CreatedOnUtc = DateTime.UtcNow,
                     LastActivityDateUtc = DateTime.UtcNow,
-                    RegisteredInStoreId = _storeContext.CurrentStore.Return(s => s.Id, 0)
+                    RegisteredInStoreId = _storeContext.CurrentStore.Id
                 };
                 _customerService.InsertCustomer(customer);
 

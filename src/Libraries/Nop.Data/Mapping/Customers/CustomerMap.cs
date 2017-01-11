@@ -12,7 +12,6 @@ namespace Nop.Data.Mapping.Customers
             this.Property(u => u.Email).HasMaxLength(1000);
             this.Property(u => u.EmailToRevalidate).HasMaxLength(1000);
             this.Property(u => u.SystemName).HasMaxLength(400);
-            this.Property(u => u.RegisteredInStoreId).IsRequired();
             
             this.Ignore(u => u.PasswordFormat);
 

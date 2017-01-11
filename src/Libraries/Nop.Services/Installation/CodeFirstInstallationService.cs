@@ -4065,8 +4065,13 @@ namespace Nop.Services.Installation
                                 };
             _customerRoleRepository.Insert(customerRoles);
 
-            //default store ID
-            var storeId = _storeRepository.Table.FirstOrDefault().Return(s => s.Id, 0);
+            //default store 
+            var defaultStore = _storeRepository.Table.FirstOrDefault();
+
+            if (defaultStore == null)
+                throw new Exception("No default store could be loaded");
+
+            var storeId = defaultStore.Id;
 
             //admin user
             var adminUser = new Customer

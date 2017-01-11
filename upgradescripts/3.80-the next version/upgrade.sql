@@ -1110,7 +1110,7 @@ set @resources='
     <Value>Registered in the store</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Customers.Customers.Fields.RegisteredInStore.Hint">
-    <Value>Indicating in which store the customer registered</Value>
+    <Value>Indicating in which store the customer is registered</Value>
   </LocaleResource>  
 </Language>
 '
